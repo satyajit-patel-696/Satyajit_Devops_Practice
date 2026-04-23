@@ -1,0 +1,2 @@
+**docker container start -ai my-nginx-container**
+here -ai flags are used to start the container in interactive mode and attach to it, allowing you to interact with the container's shell again after restarting it

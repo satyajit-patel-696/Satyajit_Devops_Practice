@@ -68,3 +68,12 @@ but if you have given -it and then press exit and then restart the container the
 here -ai flags are used to start the container in interactive mode and attach to it, allowing you to interact with the container's shell again after restarting it. This is useful for resuming your work inside the container after it has been stopped.
 
 
+#Dockerfile
+FROM python:3.9-slim
+WORKDIR /app
+CMD ["python","-c","print('Hello from Python')"]
+
+#docker build -t my-python-app .
+#docker run my-python-app -->output will be Hello from Python
+
+#docker run -d ubuntu sleep 1000
