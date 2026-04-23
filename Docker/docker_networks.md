@@ -44,3 +44,5 @@ docker image build -t mynginx:latest . #here . means build in this repo
 docker system df  -->to check the disk usage of Docker images, containers, and volumes
 docker system prune  -->to remove all unused Docker objects (images, containers, volumes, and networks) to free up disk space. Be cautious when using this command, as it will remove all unused objects, including those that may still be needed. You can use the --volumes flag to also remove unused volumes.
 docker image prune  -->to remove all unused Docker images to free up disk space. Be cautious when using this command, as it will remove all unused images, including those that may still be needed. You can use the --filter flag to specify criteria for which images to remove, such as dangling images or images that are not tagged.
+
+
