@@ -15,3 +15,14 @@ docker service ps alpine
 ## this command will list all the tasks of the alpine service and you will see that there are 3 replicas of the alpine service running
 docker service rm alpine
 ## this command will remove the alpine service from the swarm
+
+
+##Routing Mesh
+
+-Routes ingress (incoming) packets for a Service to proper Task
+-Spans all nodes in Swarm
+-Uses IPVS from Linux Kernel
+-Load balances Swarm Services across their Tasks
+-Two ways this works:
+-Container-to-container in a Overlay network (uses VIP)
+-External traffic incoming to published ports (all nodes listen)
