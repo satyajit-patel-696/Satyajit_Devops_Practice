@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  ubuntu:
+    image: ubuntu:latest
+    container_name: my-ubuntu
+    tty: true  #for  terminal like -t
+    stdin_open: true  #for interactive like -i
+    # commands: sleep infinity
+
+

@@ -8,9 +8,9 @@ docker container inspect webhost --format  '{{range .NetworkSettings.Networks}}{
 
 docker network ls  -->to list all the networks
 docker network inspect bridge  -->to inspect the default bridge network
-#bridge is a virtual network that Docker creates on the host machine. It allows containers to communicate with each other and with the host machine.
+# bridge is a virtual network that Docker creates on the host machine. It allows containers to communicate with each other and with the host machine.
 docker network inspect host  -->to inspect the host network
-#host network is a network that allows containers to share the host's network stack. This means that the container will have access to all the network interfaces and ports of the host machine.
+# host network is a network that allows containers to share the host's network stack. This means that the container will have access to all the network interfaces and ports of the host machine.
 docker network create mynetwork  -->to create a custom  virtual network
 
 docker container run -d --name webhost1 --network mynetwork nginx:alpine
@@ -44,5 +44,6 @@ docker image build -t mynginx:latest . #here . means build in this repo
 docker system df  -->to check the disk usage of Docker images, containers, and volumes
 docker system prune  -->to remove all unused Docker objects (images, containers, volumes, and networks) to free up disk space. Be cautious when using this command, as it will remove all unused objects, including those that may still be needed. You can use the --volumes flag to also remove unused volumes.
 docker image prune  -->to remove all unused Docker images to free up disk space. Be cautious when using this command, as it will remove all unused images, including those that may still be needed. You can use the --filter flag to specify criteria for which images to remove, such as dangling images or images that are not tagged.
+
 
 
